@@ -1,39 +1,55 @@
-# QA Testing Portfolio - Bishwanath Rana
+# Manual Testing Projects - Bishwanath Rana
 
-Aspiring QA Intern | Manual Testing Projects
+Aspiring **QA Intern** | Portfolio of Manual Software Testing
+
+This repository contains my hands-on manual testing practice projects, including test case design, execution, bug reporting, and API testing.
 
 ## Projects
 
-### 1. Manual Testing of E-commerce Web Application
-- Tested [SauceDemo](https://www.saucedemo.com/) – a popular demo e-commerce site
-- **100+ manual test cases** written for Login, Product Search, Cart, and Checkout
-- Identified and reported 30+ defects with screenshots
-- Focus: Functional, Regression, Usability, Negative & Boundary testing
+### 1. E-commerce Manual Testing (SauceDemo)
+- Performed comprehensive manual testing on https://www.saucedemo.com/
+- **100+ test cases** covering Login, Product, Cart, and Checkout flows
+- Identified and documented multiple defects with clear reproduction steps
+- Focused on Functional, Regression, Usability, Negative, and Boundary testing
 
-→ [View Test Cases & Bug Reports](./Ecommerce-Manual-Testing/)
+→ [View Test Cases](./Ecommerce-Manual-Testing/Test-Cases.md)  
+→ [View Bug Reports](./Ecommerce-Manual-Testing/Bug-Reports.md)  
+→ [View Screenshots](./Ecommerce-Manual-Testing/Screenshots/)
 
 ### 2. REST API Testing - Student Management System
-- Performed API testing using Postman
-- Covered CRUD operations, data validation, error handling, and status codes
-- Validated database responses using SQL queries
+- Manual API testing using Postman
+- Tested CRUD operations, validation, error handling, and status codes
+- Performed database validation using SQL
 
-→ [View API Test Cases & Collection](./API-Testing-Student-System/)
+→ [View API Project](./API-Testing-Student-System/)
 
 ### 3. Exploratory & Functional Testing
-- Conducted exploratory testing on various demo web applications
-- Focused on uncovering edge cases and usability issues
+- Conducted exploratory testing on demo web applications
+- Focused on discovering edge cases and usability issues
+
+→ [View Exploratory Testing](./Exploratory-Testing/)
 
 ## Skills Demonstrated
-- Test Case Design & Execution
-- Bug Reporting with clear reproduction steps
-- API Testing with Postman
+- Manual Testing & Test Case Design
+- Bug Reporting with detailed steps to reproduce
+- API Testing using Postman
 - Database Validation (SQL)
-- Cross-browser & Responsive Testing
+- Cross-browser and Responsive Testing
+- Clear Documentation & Reporting
 
 ## Tools Used
 - Postman
 - Microsoft Excel / Google Sheets
 - Git & GitHub
-- Linux (for environment setup)
+- Linux (for test environment setup)
 
-Feel free to explore the folders above. Open to internship opportunities in QA/Software Testing.
+---
+
+**Status**: Actively building and improving this portfolio.  
+**Open to QA Intern / Software Testing Intern opportunities** in Nepal or remote.
+
+Feel free to explore the projects above.
+
+**Contact**:  
+Email: ranabr505@gmail.com  
+LinkedIn: https://www.linkedin.com/in/bishorana6463/
