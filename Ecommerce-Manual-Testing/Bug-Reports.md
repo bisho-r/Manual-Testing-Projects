@@ -3,8 +3,7 @@
 
 **Tested Application**: https://www.saucedemo.com/
 
-**Tester:** Bishwanath Rana  
-**Total Bugs Reported:** 12  
+**Tester:** Bishwanath Rana    
 **Date:** May 2026  
 
 ---
