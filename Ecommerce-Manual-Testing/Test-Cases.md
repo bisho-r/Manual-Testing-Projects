@@ -93,18 +93,18 @@
 
 | TC_ID      | Test Scenario                                      | Preconditions                | Test Steps                                                                 | Test Data                          | Expected Result |
 |------------|----------------------------------------------------|------------------------------|----------------------------------------------------------------------------|------------------------------------|-----------------|
-| TC_066    | Navigate to Checkout Information                  | Items in cart               | Cart → Click Checkout                                                     | 2 items                            | Information page opens |
-| TC_067    | First Name Required Validation                    | On Information page         | Leave First Name blank → Continue                                         | -                                  | "First Name is required" |
-| TC_068    | Last Name Required Validation                     | On Information page         | Leave Last Name blank → Continue                                          | -                                  | "Last Name is required" |
-| TC_069    | Zip/Postal Code Required Validation               | On Information page         | Leave Zip blank → Continue                                                | -                                  | "Postal Code is required" |
-| TC_070    | Proceed with Valid Information                    | On Information page         | Fill all fields → Continue                                                | Bishor / Rana / 12345              | Goes to Overview page |
-| TC_071    | Verify Order Summary                              | On Overview page            | Check items, quantity, description, price                                 | -                                  | All details match |
-| TC_072    | Verify Tax (8%) and Total Calculation             | On Overview page            | Check calculations                                                        | -                                  | Correct tax & total |
-| TC_073    | Complete Purchase                                 | On Overview page            | Click Finish                                                              | -                                  | Order placed |
-| TC_074    | Thank You / Order Confirmation Page               | After Finish                | Observe page                                                              | -                                  | "Thank you for your order!" |
-| TC_075    | Back to Home button                               | On Thank You page           | Click "Back to products"                                                  | -                                  | Redirected to Products |
-| TC_076    | Cancel Checkout from Information page             | On Information page         | Click Cancel                                                              | -                                  | Returns to Cart |
-| TC_077    | Cancel Checkout from Overview page                | On Overview page            | Click Cancel                                                              | -                                  | Returns to Cart |
+| TC_056    | Navigate to Checkout Information                  | Items in cart               | Cart → Click Checkout                                                     | 2 items                            | Information page opens |
+| TC_057    | First Name Required Validation                    | On Information page         | Leave First Name blank → Continue                                         | -                                  | "First Name is required" |
+| TC_058    | Last Name Required Validation                     | On Information page         | Leave Last Name blank → Continue                                          | -                                  | "Last Name is required" |
+| TC_059    | Zip/Postal Code Required Validation               | On Information page         | Leave Zip blank → Continue                                                | -                                  | "Postal Code is required" |
+| TC_060    | Proceed with Valid Information                    | On Information page         | Fill all fields → Continue                                                | Bishor / Rana / 12345              | Goes to Overview page |
+| TC_061    | Verify Order Summary                              | On Overview page            | Check items, quantity, description, price                                 | -                                  | All details match |
+| TC_062    | Verify Tax (8%) and Total Calculation             | On Overview page            | Check calculations                                                        | -                                  | Correct tax & total |
+| TC_063    | Complete Purchase                                 | On Overview page            | Click Finish                                                              | -                                  | Order placed |
+| TC_064    | Thank You / Order Confirmation Page               | After Finish                | Observe page                                                              | -                                  | "Thank you for your order!" |
+| TC_065    | Back to Home button                               | On Thank You page           | Click "Back to products"                                                  | -                                  | Redirected to Products |
+| TC_066    | Cancel Checkout from Information page             | On Information page         | Click Cancel                                                              | -                                  | Returns to Cart |
+| TC_067    | Cancel Checkout from Overview page                | On Overview page            | Click Cancel                                                              | -                                  | Returns to Cart |
 
 ---
 
@@ -112,16 +112,16 @@
 
 | TC_ID      | Test Scenario                                      | Preconditions     | Test Steps                                      | Test Data      | Expected Result |
 |------------|----------------------------------------------------|-------------------|-------------------------------------------------|----------------|-----------------|
-| TC_096    | Keyboard Navigation (Accessibility)               | Any page          | Use Tab key to navigate                        | -              | All elements accessible |
-| TC_097    | Responsive Design - Multiple Screen Sizes         | All pages         | Resize browser window                          | -              | UI remains usable |
-| TC_098    | Cross Browser Compatibility                       | Critical flows    | Test on Chrome & Firefox                       | -              | Consistent behavior |
-| TC_099    | No sensitive data in URL                          | After login       | Check URL                                      | -              | No credentials in URL |
-| TC_100    | End-to-End Flow                                   | Fresh session     | Login → Add items → Checkout → Order           | -              | Complete flow successful |
-| TC_101    | Page Title Validation                             | All major pages   | Check browser title                            | -              | Correct titles |
-| TC_102    | Footer Links Working                              | Any page          | Click social links                             | -              | Open correctly |
-| TC_103    | Regression Testing - Critical Flows               | After changes     | Run Login + Checkout flow                      | -              | All pass |
-| TC_104    | Performance Observation                           | Products page     | Note load time                                 | -              | Reasonable speed |
-| TC_105    | HTTPS Security                                    | All pages         | Check connection                               | -              | Secure (HTTPS) |                                             |
+| TC_068    | Keyboard Navigation (Accessibility)               | Any page          | Use Tab key to navigate                        | -              | All elements accessible |
+| TC_069    | Responsive Design - Multiple Screen Sizes         | All pages         | Resize browser window                          | -              | UI remains usable |
+| TC_070    | Cross Browser Compatibility                       | Critical flows    | Test on Chrome & Firefox                       | -              | Consistent behavior |
+| TC_071    | No sensitive data in URL                          | After login       | Check URL                                      | -              | No credentials in URL |
+| TC_072    | End-to-End Flow                                   | Fresh session     | Login → Add items → Checkout → Order           | -              | Complete flow successful |
+| TC_072    | Page Title Validation                             | All major pages   | Check browser title                            | -              | Correct titles |
+| TC_073    | Footer Links Working                              | Any page          | Click social links                             | -              | Open correctly |
+| TC_074    | Regression Testing - Critical Flows               | After changes     | Run Login + Checkout flow                      | -              | All pass |
+| TC_075    | Performance Observation                           | Products page     | Note load time                                 | -              | Reasonable speed |
+| TC_076    | HTTPS Security                                    | All pages         | Check connection                               | -              | Secure (HTTPS) |                                             |
 
 **Notes**: 
 - I executed these test cases manually.
