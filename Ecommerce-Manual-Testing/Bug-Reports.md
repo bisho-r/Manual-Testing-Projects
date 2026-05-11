@@ -2,6 +2,7 @@
 # Bug Reports - E-commerce Testing (SauceDemo)
 
 **Tested Application**: https://www.saucedemo.com/
+
 **Tester:** Bishwanath Rana  
 **Total Bugs Reported:** 12  
 **Date:** May 2026  
