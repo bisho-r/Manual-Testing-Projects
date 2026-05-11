@@ -158,4 +158,4 @@
 - Screenshots are stored in the `Screenshots/` folder.
 - I will add more bugs as I continue testing.
 
-**Total Bugs Found**: 12 (as of now)
+**Total Bugs Found**: 10 (as of now)
