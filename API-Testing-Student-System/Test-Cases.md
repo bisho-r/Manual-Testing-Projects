@@ -1,21 +1,64 @@
-# REST API Testing - Student / User Management (reqres.in)
+# API Test Cases - Student/User Management System
 
-Tested API: https://reqres.in/
+**API Base URL**: `https://reqres.in/api`
 
-**Tools Used**: Postman (Manual Testing)
+**Test Environment**: Postman | Newman | Manual
 
-### Test Cases
+### 1. User Listing & Pagination
 
-| Test Case ID       | Test Scenario                    | Test Steps                                      | Test Data                          | Expected Result                                      |
-|--------------------|----------------------------------|-------------------------------------------------|------------------------------------|------------------------------------------------------|
-| TC_API_001        | Get Single User (GET)           | Send GET request to /api/users/2                | -                                  | Status 200 + user data returned                      |
-| TC_API_002        | Create New User (POST)          | Send POST request to /api/users                 | {"name": "Bishwanath", "job": "QA Intern"} | Status 201 + user created with id and timestamp     |
-| TC_API_003        | Update User (PUT)               | Send PUT request to /api/users/2                | {"name": "Bishwanath", "job": "QA Tester"} | Status 200 + updated data returned                   |
-| TC_API_004        | Delete User (DELETE)            | Send DELETE request to /api/users/2             | -                                  | Status 204 (No Content)                              |
-| TC_API_005        | Invalid User ID                 | Send GET request to /api/users/9999             | -                                  | Status 404 + error response                          |
-| TC_API_006        | Register Successful             | POST to /api/register                           | Valid email & password             | Status 200 + token returned                          |
+| TC_ID | Scenario | Method | Endpoint | Test Data | Expected Status | Expected Result |
+|-------|----------|--------|----------|-----------|-----------------|-----------------|
+| TC_API_001 | Get all users (default) | GET | `/users` | - | 200 | List of users + pagination |
+| TC_API_002 | Get users with page 2 | GET | `/users?page=2` | page=2 | 200 | Users on page 2 |
+| TC_API_003 | Get single user | GET | `/users/2` | id=2 | 200 | User details |
+| TC_API_004 | Get non-existent user | GET | `/users/9999` | id=9999 | 404 | `{}` (empty) |
 
-**Notes**:
-- All requests were tested manually using Postman.
-- Response validation included status codes, response time, and JSON structure.
-- Screenshots of successful and failed requests are in the Screenshots folder.
+### 2. Create User (POST)
+
+| TC_ID | Scenario | Method | Endpoint | Request Body | Expected Status |
+|-------|----------|--------|----------|--------------|-----------------|
+| TC_API_005 | Create user - Valid | POST | `/users` | `{"name": "Bishwanath Rana", "job": "QA Engineer"}` | 201 |
+| TC_API_006 | Create user - Missing name | POST | `/users` | `{"job": "Tester"}` | 201 (name optional) |
+| TC_API_007 | Create user - Empty body | POST | `/users` | `{}` | 201 |
+| TC_API_008 | Create user - Special characters | POST | `/users` | `{"name": "Test@#$%", "job": "Dev"}` | 201 |
+
+### 3. Update User
+
+| TC_ID | Scenario | Method | Endpoint | Request Body | Expected Status |
+|-------|----------|--------|----------|--------------|-----------------|
+| TC_API_009 | Update user - PUT (Full) | PUT | `/users/2` | `{"name": "Updated Name", "job": "Senior QA"}` | 200 |
+| TC_API_010 | Update user - PATCH (Partial) | PATCH | `/users/2` | `{"job": "Lead QA"}` | 200 |
+| TC_API_011 | Update non-existent user | PUT | `/users/9999` | ... | 200 (still returns updated object) |
+
+### 4. Delete User
+
+| TC_ID | Scenario | Method | Endpoint | Expected Status |
+|-------|----------|--------|----------|-----------------|
+| TC_API_012 | Delete existing user | DELETE | `/users/2` | 204 |
+| TC_API_013 | Delete non-existent user | DELETE | `/users/9999` | 204 |
+
+### 5. Authentication & Register/Login
+
+| TC_ID | Scenario | Method | Endpoint | Request Body | Expected Status |
+|-------|----------|--------|----------|--------------|-----------------|
+| TC_API_014 | Register - Successful | POST | `/register` | `{"email": "eve.holt@reqres.in", "password": "pistol"}` | 200 |
+| TC_API_015 | Register - Missing password | POST | `/register` | `{"email": "eve.holt@reqres.in"}` | 400 |
+| TC_API_016 | Login - Successful | POST | `/login` | `{"email": "eve.holt@reqres.in", "password": "pistol"}` | 200 |
+| TC_API_017 | Login - Invalid credentials | POST | `/login` | `{"email": "eve.holt@reqres.in", "password": "wrong"}` | 400 |
+
+### 6. Negative & Validation Tests
+
+- Invalid HTTP Method (e.g., POST on `/users/2`)
+- Invalid JSON format
+- Very long name / job title (boundary)
+- SQL Injection attempt: `name: "'; DROP TABLE users;--"`
+- XSS attempt in name field
+- Missing Content-Type header
+- Unsupported media type
+
+### 7. Non-Functional
+
+- Response time < 1000ms
+- Schema validation (JSON structure)
+- Pagination limits
+- Delayed response: `/users?delay=3`
