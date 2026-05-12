@@ -1,18 +1,29 @@
-# API Testing - Student Management System
+# REST API Testing - Student/User Management System
 
-**Tested using**: Postman (Manual API Testing)
+**Tested API**: [https://reqres.in/](https://reqres.in/)
 
-### What I Tested
-- CRUD operations (Create, Read, Update, Delete students)
-- Input validation
-- Error handling and proper HTTP status codes
-- Response structure and JSON format
-- Database validation using SQL queries
+**Tools**: Postman, Newman, JSON Schema Validator, SQL (for conceptual DB validation)
 
-### Files in this folder
-- Test-Cases.xlsx → Manual test cases for API
-- Postman-Collection.json → Exported Postman collection
-- Screenshots/ → Screenshots of test results and bugs
-- SQL-Validation-Queries.md (optional)
+### Scope & Coverage
+- **CRUD Operations**
+- **Input Validation & Error Handling**
+- **Authentication & Authorization** (Register/Login)
+- **Response Validation** (Status codes, Schema, Performance)
+- **Negative & Edge Case Testing**
+- **Database Validation Concepts** (SQL queries)
 
-**Approach**: Positive, Negative, and Edge case testing.
+### Key Test Categories
+
+| Category                  | Coverage                                      | Count |
+|--------------------------|-----------------------------------------------|-------|
+| Functional (CRUD)        | GET, POST, PUT, PATCH, DELETE                 | 12+   |
+| Validation               | Required fields, data types, boundaries       | 15+   |
+| Error Handling           | 400, 404, 422, invalid tokens etc.            | 10+   |
+| Security Basics          | SQL injection attempts, auth bypass           | 8     |
+| Performance              | Response time, load (10 concurrent via Newman)| -     |
+
+**Postman Collection**: [Download](Postman-Collection.json)
+
+**Newman HTML Report**: [View Report](Newman-Report.html)
+
+**View Detailed Test Cases** → [Test-Cases.md](Test-Cases.md) | [Test-Cases.xlsx](Test-Cases.xlsx)
