@@ -1,0 +1,161 @@
+{
+  "info": {
+    "name": "Student Management System - API Testing",
+    "description": "Complete API testing collection for https://reqres.in | Functional + Negative + Auth",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "url": "https://reqres.in/api/users"
+          }
+        },
+        {
+          "name": "Get All Users - Page 2",
+          "request": {
+            "method": "GET",
+            "url": "https://reqres.in/api/users?page=2"
+          }
+        },
+        {
+          "name": "Get Single User",
+          "request": {
+            "method": "GET",
+            "url": "https://reqres.in/api/users/2"
+          }
+        },
+        {
+          "name": "Get Single User - Not Found",
+          "request": {
+            "method": "GET",
+            "url": "https://reqres.in/api/users/9999"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CRUD Operations",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "url": "https://reqres.in/api/users",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Bishwanath Rana\",\n  \"job\": \"QA Engineer\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update User - PUT",
+          "request": {
+            "method": "PUT",
+            "url": "https://reqres.in/api/users/2",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Name\",\n  \"job\": \"Senior QA Lead\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update User - PATCH",
+          "request": {
+            "method": "PATCH",
+            "url": "https://reqres.in/api/users/2",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"job\": \"Lead QA Engineer\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "url": "https://reqres.in/api/users/2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register - Success",
+          "request": {
+            "method": "POST",
+            "url": "https://reqres.in/api/register",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"pistol\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Register - Missing Password",
+          "request": {
+            "method": "POST",
+            "url": "https://reqres.in/api/register",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eve.holt@reqres.in\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Login - Success",
+          "request": {
+            "method": "POST",
+            "url": "https://reqres.in/api/login",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"pistol\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Login - Invalid",
+          "request": {
+            "method": "POST",
+            "url": "https://reqres.in/api/login",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"wrongpass\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Delay & Others",
+      "item": [
+        {
+          "name": "Delayed Response",
+          "request": {
+            "method": "GET",
+            "url": "https://reqres.in/api/users?delay=3"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://reqres.in/api"
+    }
+  ]
+}
